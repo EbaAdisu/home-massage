@@ -80,22 +80,22 @@ export const themePresets: Record<string, ThemeConfig> = {
   wellness: {
     name: 'Wellness',
     colors: {
-      primary: '#10b981', // Emerald green
-      secondary: '#6b7280', // Gray
-      accent: '#f59e0b', // Amber
-      background: '#fefefe', // Off white
-      foreground: '#1f2937', // Dark gray
-      muted: '#f3f4f6', // Light gray
-      mutedForeground: '#6b7280', // Medium gray
-      border: '#e5e7eb', // Light border
-      input: '#ffffff', // White input
-      ring: '#10b981', // Primary ring
-      destructive: '#ef4444', // Red
-      destructiveForeground: '#ffffff', // White
-      success: '#10b981', // Green
-      successForeground: '#ffffff', // White
-      warning: '#f59e0b', // Amber
-      warningForeground: '#ffffff', // White
+      primary: 'hsl(160 84% 39%)', // Emerald green
+      secondary: 'hsl(210 40% 50%)', // Blue gray
+      accent: 'hsl(45 93% 47%)', // Amber
+      background: 'hsl(0 0% 100%)', // White
+      foreground: 'hsl(210 11% 15%)', // Dark gray
+      muted: 'hsl(210 40% 98%)', // Very light blue
+      mutedForeground: 'hsl(210 11% 45%)', // Medium gray
+      border: 'hsl(210 40% 90%)', // Light border
+      input: 'hsl(210 40% 98%)', // Light input
+      ring: 'hsl(160 84% 39%)', // Primary ring
+      destructive: 'hsl(0 84% 60%)', // Red
+      destructiveForeground: 'hsl(0 0% 98%)', // White
+      success: 'hsl(160 84% 39%)', // Green
+      successForeground: 'hsl(0 0% 98%)', // White
+      warning: 'hsl(45 93% 47%)', // Amber
+      warningForeground: 'hsl(0 0% 98%)', // White
     },
     typography: {
       fontFamily: 'Inter, system-ui, sans-serif',
@@ -146,22 +146,22 @@ export const themePresets: Record<string, ThemeConfig> = {
   luxury: {
     name: 'Luxury',
     colors: {
-      primary: '#d4af37', // Gold
-      secondary: '#8b5cf6', // Purple
-      accent: '#f59e0b', // Amber
-      background: '#0f0f0f', // Dark
-      foreground: '#fafafa', // Light
-      muted: '#1a1a1a', // Dark muted
-      mutedForeground: '#a1a1aa', // Light muted
-      border: '#262626', // Dark border
-      input: '#171717', // Dark input
-      ring: '#d4af37', // Gold ring
-      destructive: '#ef4444', // Red
-      destructiveForeground: '#ffffff', // White
-      success: '#10b981', // Green
-      successForeground: '#ffffff', // White
-      warning: '#f59e0b', // Amber
-      warningForeground: '#ffffff', // White
+      primary: 'hsl(45 100% 50%)', // Gold
+      secondary: 'hsl(270 95% 60%)', // Purple
+      accent: 'hsl(45 93% 47%)', // Amber
+      background: 'hsl(0 0% 6%)', // Very dark
+      foreground: 'hsl(0 0% 98%)', // Light
+      muted: 'hsl(0 0% 10%)', // Dark muted
+      mutedForeground: 'hsl(0 0% 65%)', // Light muted
+      border: 'hsl(0 0% 15%)', // Dark border
+      input: 'hsl(0 0% 9%)', // Dark input
+      ring: 'hsl(45 100% 50%)', // Gold ring
+      destructive: 'hsl(0 84% 60%)', // Red
+      destructiveForeground: 'hsl(0 0% 98%)', // White
+      success: 'hsl(160 84% 39%)', // Green
+      successForeground: 'hsl(0 0% 98%)', // White
+      warning: 'hsl(45 93% 47%)', // Amber
+      warningForeground: 'hsl(0 0% 98%)', // White
     },
     typography: {
       fontFamily: 'Playfair Display, serif',
@@ -212,22 +212,22 @@ export const themePresets: Record<string, ThemeConfig> = {
   modern: {
     name: 'Modern',
     colors: {
-      primary: '#3b82f6', // Blue
-      secondary: '#64748b', // Slate
-      accent: '#06b6d4', // Cyan
-      background: '#ffffff', // White
-      foreground: '#0f172a', // Dark slate
-      muted: '#f1f5f9', // Light slate
-      mutedForeground: '#64748b', // Slate
-      border: '#e2e8f0', // Light border
-      input: '#ffffff', // White input
-      ring: '#3b82f6', // Blue ring
-      destructive: '#ef4444', // Red
-      destructiveForeground: '#ffffff', // White
-      success: '#10b981', // Green
-      successForeground: '#ffffff', // White
-      warning: '#f59e0b', // Amber
-      warningForeground: '#ffffff', // White
+      primary: 'hsl(221 83% 53%)', // Blue
+      secondary: 'hsl(215 16% 47%)', // Slate
+      accent: 'hsl(188 94% 43%)', // Cyan
+      background: 'hsl(0 0% 100%)', // White
+      foreground: 'hsl(222 84% 5%)', // Dark slate
+      muted: 'hsl(210 40% 98%)', // Light slate
+      mutedForeground: 'hsl(215 16% 47%)', // Slate
+      border: 'hsl(214 32% 91%)', // Light border
+      input: 'hsl(0 0% 100%)', // White input
+      ring: 'hsl(221 83% 53%)', // Blue ring
+      destructive: 'hsl(0 84% 60%)', // Red
+      destructiveForeground: 'hsl(0 0% 98%)', // White
+      success: 'hsl(160 84% 39%)', // Green
+      successForeground: 'hsl(0 0% 98%)', // White
+      warning: 'hsl(45 93% 47%)', // Amber
+      warningForeground: 'hsl(0 0% 98%)', // White
     },
     typography: {
       fontFamily: 'Inter, system-ui, sans-serif',
@@ -278,22 +278,22 @@ export const themePresets: Record<string, ThemeConfig> = {
   spa: {
     name: 'Spa',
     colors: {
-      primary: '#059669', // Emerald
-      secondary: '#6b7280', // Gray
-      accent: '#d97706', // Orange
-      background: '#fefefe', // Off white
-      foreground: '#1f2937', // Dark gray
-      muted: '#f0fdf4', // Light green
-      mutedForeground: '#6b7280', // Medium gray
-      border: '#d1fae5', // Light green border
-      input: '#ffffff', // White input
-      ring: '#059669', // Emerald ring
-      destructive: '#ef4444', // Red
-      destructiveForeground: '#ffffff', // White
-      success: '#10b981', // Green
-      successForeground: '#ffffff', // White
-      warning: '#f59e0b', // Amber
-      warningForeground: '#ffffff', // White
+      primary: 'hsl(158 64% 52%)', // Emerald
+      secondary: 'hsl(210 11% 45%)', // Gray
+      accent: 'hsl(25 95% 53%)', // Orange
+      background: 'hsl(0 0% 100%)', // White
+      foreground: 'hsl(210 11% 15%)', // Dark gray
+      muted: 'hsl(120 60% 97%)', // Light green
+      mutedForeground: 'hsl(210 11% 45%)', // Medium gray
+      border: 'hsl(120 60% 90%)', // Light green border
+      input: 'hsl(0 0% 100%)', // White input
+      ring: 'hsl(158 64% 52%)', // Emerald ring
+      destructive: 'hsl(0 84% 60%)', // Red
+      destructiveForeground: 'hsl(0 0% 98%)', // White
+      success: 'hsl(160 84% 39%)', // Green
+      successForeground: 'hsl(0 0% 98%)', // White
+      warning: 'hsl(45 93% 47%)', // Amber
+      warningForeground: 'hsl(0 0% 98%)', // White
     },
     typography: {
       fontFamily: 'Inter, system-ui, sans-serif',
@@ -357,21 +357,24 @@ export function getAllThemes(): string[] {
 
 export function getThemeCSSVariables(theme: ThemeConfig): Record<string, string> {
   return {
-    '--primary': theme.colors.primary,
-    '--secondary': theme.colors.secondary,
-    '--accent': theme.colors.accent,
     '--background': theme.colors.background,
     '--foreground': theme.colors.foreground,
+    '--card': theme.colors.background,
+    '--card-foreground': theme.colors.foreground,
+    '--popover': theme.colors.background,
+    '--popover-foreground': theme.colors.foreground,
+    '--primary': theme.colors.primary,
+    '--primary-foreground': theme.colors.foreground,
+    '--secondary': theme.colors.secondary,
+    '--secondary-foreground': theme.colors.foreground,
     '--muted': theme.colors.muted,
     '--muted-foreground': theme.colors.mutedForeground,
+    '--accent': theme.colors.accent,
+    '--accent-foreground': theme.colors.foreground,
+    '--destructive': theme.colors.destructive,
+    '--destructive-foreground': theme.colors.foreground,
     '--border': theme.colors.border,
     '--input': theme.colors.input,
     '--ring': theme.colors.ring,
-    '--destructive': theme.colors.destructive,
-    '--destructive-foreground': theme.colors.destructiveForeground,
-    '--success': theme.colors.success,
-    '--success-foreground': theme.colors.successForeground,
-    '--warning': theme.colors.warning,
-    '--warning-foreground': theme.colors.warningForeground,
   };
 }
