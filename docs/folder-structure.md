@@ -11,11 +11,59 @@ home-massage/
 │   ├── folder-structure.md        # This file - folder structure documentation
 │   └── README.md                  # Documentation index
 ├── src/                           # Source code
-│   └── app/                      # Next.js App Router
-│       ├── favicon.ico           # Site favicon
-│       ├── globals.css           # Global styles
-│       ├── layout.tsx            # Root layout component
-│       └── page.tsx               # Home page component
+│   ├── app/                      # Next.js App Router
+│   │   ├── favicon.ico           # Site favicon
+│   │   ├── globals.css           # Global styles
+│   │   ├── layout.tsx            # Root layout component
+│   │   └── page.tsx              # Home page component
+│   ├── components/               # Reusable components
+│   │   ├── ui/                   # Shadcn/ui components
+│   │   │   ├── button.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── avatar.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── sheet.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   ├── navigation-menu.tsx
+│   │   │   ├── breadcrumb.tsx
+│   │   │   ├── pagination.tsx
+│   │   │   ├── select.tsx
+│   │   │   ├── textarea.tsx
+│   │   │   ├── checkbox.tsx
+│   │   │   ├── radio-group.tsx
+│   │   │   ├── switch.tsx
+│   │   │   ├── slider.tsx
+│   │   │   ├── progress.tsx
+│   │   │   ├── skeleton.tsx
+│   │   │   ├── alert.tsx
+│   │   │   ├── tooltip.tsx
+│   │   │   ├── popover.tsx
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── form.tsx
+│   │   │   └── sonner.tsx
+│   │   ├── forms/                # Form components
+│   │   ├── layout/               # Layout components
+│   │   ├── features/             # Feature-specific components
+│   │   ├── animations/           # Animation components
+│   │   │   ├── page-transition.tsx
+│   │   │   ├── fade-in.tsx
+│   │   │   ├── slide-up.tsx
+│   │   │   └── loading-spinner.tsx
+│   │   ├── theme-provider.tsx    # Theme provider component
+│   │   └── theme-selector.tsx    # Theme selector component
+│   ├── lib/                      # Utility libraries
+│   │   ├── utils.ts              # General utilities
+│   │   └── theme.ts              # Theme configuration
+│   ├── services/                 # API service functions
+│   ├── hooks/                    # Custom React hooks
+│   ├── stores/                   # Zustand stores
+│   │   └── theme-store.ts        # Theme state management
+│   ├── types/                    # TypeScript type definitions
+│   ├── data/                     # Mock data
+│   └── styles/                   # Styling files
 ├── public/                       # Static assets
 │   ├── file.svg                  # SVG icons
 │   ├── globe.svg
@@ -24,16 +72,20 @@ home-massage/
 │   └── window.svg
 ├── .cursor/                      # Cursor IDE configuration
 │   └── rules/                    # Cursor rules
-│       └── shadcn-mcp-usage.mdc  # Shadcn MCP usage rule
+│       ├── shadcn-mcp-usage.mdc # Shadcn MCP usage rule
+│       └── folder-structure.mdc  # Folder structure rule
 ├── node_modules/                 # Dependencies
-├── package.json                  # Project dependencies and scripts
+├── package.json                 # Project dependencies and scripts
 ├── package-lock.json            # Lock file for dependencies
 ├── next.config.ts               # Next.js configuration
-├── tsconfig.json               # TypeScript configuration
-├── eslint.config.mjs           # ESLint configuration
-├── postcss.config.mjs          # PostCSS configuration
-├── next-env.d.ts               # Next.js TypeScript declarations
-└── README.md                   # Project README
+├── tsconfig.json                # TypeScript configuration
+├── eslint.config.mjs            # ESLint configuration
+├── postcss.config.mjs           # PostCSS configuration
+├── next-env.d.ts                # Next.js TypeScript declarations
+├── .prettierrc                  # Prettier configuration
+├── .prettierignore              # Prettier ignore file
+├── components.json              # Shadcn/ui configuration
+└── README.md                    # Project README
 ```
 
 ## Planned Folder Structure (To Be Created)
