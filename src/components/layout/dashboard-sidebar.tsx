@@ -9,12 +9,9 @@ import {
     BarChart3,
     Calendar,
     Home,
-    MapPin,
-    MessageSquare,
     Settings,
     Star,
     User,
-    Users,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -27,28 +24,8 @@ const customerNavItems = [
     icon: Home,
   },
   {
-    title: 'Bookings',
-    href: '/customer/bookings',
-    icon: Calendar,
-  },
-  {
-    title: 'Find Masseurs',
-    href: '/customer/search',
-    icon: MapPin,
-  },
-  {
-    title: 'Favorites',
-    href: '/customer/favorites',
-    icon: Star,
-  },
-  {
-    title: 'Messages',
-    href: '/customer/messages',
-    icon: MessageSquare,
-  },
-  {
     title: 'Profile',
-    href: '/customer/profile',
+    href: '/profile',
     icon: User,
   },
 ];
@@ -60,38 +37,28 @@ const masseurNavItems = [
     icon: Home,
   },
   {
-    title: 'Bookings',
-    href: '/masseur/bookings',
-    icon: Calendar,
-  },
-  {
-    title: 'Clients',
-    href: '/masseur/clients',
-    icon: Users,
-  },
-  {
     title: 'Services',
     href: '/masseur/services',
     icon: Settings,
   },
   {
-    title: 'Reviews',
-    href: '/masseur/reviews',
+    title: 'Availability',
+    href: '/masseur/availability',
+    icon: Calendar,
+  },
+  {
+    title: 'Portfolio',
+    href: '/masseur/portfolio',
     icon: Star,
   },
   {
-    title: 'Analytics',
-    href: '/masseur/analytics',
+    title: 'Earnings',
+    href: '/masseur/earnings',
     icon: BarChart3,
   },
   {
-    title: 'Messages',
-    href: '/masseur/messages',
-    icon: MessageSquare,
-  },
-  {
     title: 'Profile',
-    href: '/masseur/profile',
+    href: '/profile',
     icon: User,
   },
 ];

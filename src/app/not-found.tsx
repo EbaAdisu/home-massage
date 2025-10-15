@@ -32,10 +32,10 @@ export default function NotFound() {
             <SlideUp delay={700}>
               <div className="text-center space-y-2">
                 <p className="text-muted-foreground">
-                  The page you're looking for doesn't exist or has been moved.
+                  The page you&apos;re looking for doesn&apos;t exist or has been moved.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Don't worry, our masseurs are still here to help you relax!
+                  Don&apos;t worry, our masseurs are still here to help you relax!
                 </p>
               </div>
             </SlideUp>
@@ -61,7 +61,7 @@ export default function NotFound() {
             <SlideUp delay={900}>
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-3">
-                  Need help finding what you're looking for?
+                  Need help finding what you&apos;re looking for?
                 </p>
                 <Button variant="ghost" size="sm" asChild>
                   <Link href="/contact">

@@ -23,6 +23,7 @@ import {
   Clock,
   Heart,
   MapPin,
+  Navigation,
   Phone,
   Shield,
   Sparkles,
@@ -50,6 +51,12 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={200}>
                 <div className="flex items-center gap-4">
+                  <Button variant="ghost" asChild>
+                    <a href="/navigation">
+                      <Navigation className="mr-2 h-4 w-4" />
+                      Navigation
+                    </a>
+                  </Button>
                   <Button variant="ghost" asChild>
                     <a href="/login">Sign In</a>
                   </Button>

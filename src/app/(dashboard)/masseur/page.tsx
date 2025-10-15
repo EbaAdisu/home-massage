@@ -2,13 +2,14 @@ import { FadeIn } from '@/components/animations/fade-in';
 import { SlideUp } from '@/components/animations/slide-up';
 import { Button } from '@/components/ui/button';
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card';
-import { Calendar, DollarSign, Star, Users } from 'lucide-react';
+import { BarChart3, Calendar, DollarSign, Image, Settings, Star, Users } from 'lucide-react';
+import Link from 'next/link';
 
 export default function MasseurDashboard() {
   return (
@@ -137,17 +138,29 @@ export default function MasseurDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Button className="w-full justify-start" variant="outline">
-                <Calendar className="mr-2 h-4 w-4" />
-                Update Availability
+              <Button asChild className="w-full justify-start" variant="outline">
+                <Link href="/masseur/availability">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Manage Availability
+                </Link>
               </Button>
-              <Button className="w-full justify-start" variant="outline">
-                <DollarSign className="mr-2 h-4 w-4" />
-                Set Pricing
+              <Button asChild className="w-full justify-start" variant="outline">
+                <Link href="/masseur/services">
+                  <Settings className="mr-2 h-4 w-4" />
+                  Manage Services
+                </Link>
               </Button>
-              <Button className="w-full justify-start" variant="outline">
-                <Star className="mr-2 h-4 w-4" />
-                View Reviews
+              <Button asChild className="w-full justify-start" variant="outline">
+                <Link href="/masseur/portfolio">
+                  <Image className="mr-2 h-4 w-4" />
+                  Portfolio Gallery
+                </Link>
+              </Button>
+              <Button asChild className="w-full justify-start" variant="outline">
+                <Link href="/masseur/earnings">
+                  <BarChart3 className="mr-2 h-4 w-4" />
+                  View Earnings
+                </Link>
               </Button>
             </CardContent>
           </Card>

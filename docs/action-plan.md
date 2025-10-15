@@ -200,13 +200,13 @@ Ready to begin Masseur Features:
   - [x] Create masseur profile preview with theme switching
   - [x] Add progress indicators and smooth transitions
 
-- [ ] **Profile Management**
-  - [ ] Create masseur dashboard layout with responsive design
-  - [ ] Implement profile editing interface with live preview
-  - [ ] Create service management UI with drag & drop
-  - [ ] Set up availability management with calendar integration
-  - [ ] Create profile status indicators with animations
-  - [ ] Add earnings tracking with beautiful charts
+- [x] **Profile Management**
+  - [x] Create masseur dashboard layout with responsive design
+  - [x] Implement profile editing interface with live preview
+  - [x] Create service management UI with drag & drop
+  - [x] Set up availability management with calendar integration
+  - [x] Create profile status indicators with animations
+  - [x] Add earnings tracking with beautiful charts
 
 ### 🎯 Phase 2 Goals
 
