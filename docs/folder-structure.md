@@ -12,6 +12,24 @@ home-massage/
 │   └── README.md                  # Documentation index
 ├── src/                           # Source code
 │   ├── app/                      # Next.js App Router
+│   │   ├── (auth)/              # Auth route group
+│   │   │   ├── login/           # Login page
+│   │   │   │   └── page.tsx
+│   │   │   ├── register/        # Registration page
+│   │   │   │   └── page.tsx
+│   │   │   ├── forgot-password/ # Password reset page
+│   │   │   │   └── page.tsx
+│   │   │   ├── masseur-register/ # Masseur registration page
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx        # Auth layout
+│   │   ├── (dashboard)/         # Dashboard route group
+│   │   │   ├── customer/        # Customer dashboard
+│   │   │   │   └── page.tsx
+│   │   │   ├── masseur/         # Masseur dashboard
+│   │   │   │   └── page.tsx
+│   │   │   ├── profile/         # Profile page
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx        # Dashboard layout
 │   │   ├── favicon.ico           # Site favicon
 │   │   ├── globals.css           # Global styles
 │   │   ├── layout.tsx            # Root layout component
@@ -45,7 +63,14 @@ home-massage/
 │   │   │   ├── form.tsx
 │   │   │   └── sonner.tsx
 │   │   ├── forms/                # Form components
+│   │   │   ├── login-form.tsx
+│   │   │   ├── register-form.tsx
+│   │   │   ├── user-profile-form.tsx
+│   │   │   ├── forgot-password-form.tsx
+│   │   │   └── masseur-registration-wizard.tsx
 │   │   ├── layout/               # Layout components
+│   │   │   ├── dashboard-header.tsx
+│   │   │   └── dashboard-sidebar.tsx
 │   │   ├── features/             # Feature-specific components
 │   │   ├── animations/           # Animation components
 │   │   │   ├── page-transition.tsx
@@ -59,8 +84,10 @@ home-massage/
 │   │   └── theme.ts              # Theme configuration
 │   ├── services/                 # API service functions
 │   ├── hooks/                    # Custom React hooks
+│   │   └── use-auth.ts           # Authentication hook
 │   ├── stores/                   # Zustand stores
-│   │   └── theme-store.ts        # Theme state management
+│   │   ├── theme-store.ts        # Theme state management
+│   │   └── user-store.ts         # User state management
 │   ├── types/                    # TypeScript type definitions
 │   ├── data/                     # Mock data
 │   └── styles/                   # Styling files
