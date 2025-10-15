@@ -20,11 +20,11 @@ export function SlideUp({
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: duration / 1000,
-          delay: delay / 1000,
-          ease: 'easeOut' as const,
-        }}
+      transition={{
+        duration: duration / 1000,
+        delay: delay / 1000,
+        ease: 'easeOut' as const,
+      }}
       className={className}
     >
       {children}

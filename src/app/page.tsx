@@ -49,7 +49,15 @@ export default function Home() {
                 </div>
               </FadeIn>
               <FadeIn delay={200}>
-                <ThemeSelector />
+                <div className="flex items-center gap-4">
+                  <Button variant="ghost" asChild>
+                    <a href="/login">Sign In</a>
+                  </Button>
+                  <Button asChild>
+                    <a href="/register">Get Started</a>
+                  </Button>
+                  <ThemeSelector />
+                </div>
               </FadeIn>
             </div>
           </div>
