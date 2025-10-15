@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { useThemeContext } from '../theme-provider';
+import React from 'react';
 
 interface SlideUpProps {
   children: React.ReactNode;
@@ -14,21 +13,17 @@ interface SlideUpProps {
 export function SlideUp({ 
   children, 
   delay = 0, 
-  duration,
+  duration = 300,
   className 
 }: SlideUpProps) {
-  const { themeConfig } = useThemeContext();
-
-  const animationDuration = duration || themeConfig.animations.duration.normal;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: parseFloat(animationDuration.replace('ms', '')) / 1000,
+        duration: duration / 1000,
         delay: delay / 1000,
-        ease: themeConfig.animations.easing.easeOut,
+        ease: 'easeOut',
       }}
       className={className}
     >

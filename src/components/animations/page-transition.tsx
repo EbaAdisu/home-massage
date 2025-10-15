@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
-import { useThemeContext } from '../theme-provider';
 
 interface PageTransitionProps {
   children: React.ReactNode;
@@ -10,8 +9,6 @@ interface PageTransitionProps {
 }
 
 export function PageTransition({ children, className }: PageTransitionProps) {
-  const { themeConfig } = useThemeContext();
-
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -32,8 +29,8 @@ export function PageTransition({ children, className }: PageTransitionProps) {
 
   const pageTransition = {
     type: 'tween' as const,
-    ease: themeConfig.animations.easing.easeInOut as any,
-    duration: parseFloat(themeConfig.animations.duration.normal.replace('ms', '')) / 1000,
+    ease: 'easeInOut',
+    duration: 0.3,
   };
 
   return (

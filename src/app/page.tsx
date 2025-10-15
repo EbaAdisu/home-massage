@@ -149,10 +149,10 @@ export default function Home() {
                   <p className="text-muted-foreground">Average Rating</p>
                 </CardContent>
               </Card>
-            </div>
+        </div>
           </FadeIn>
-        </main>
-      </div>
+      </main>
+    </div>
     </PageTransition>
   );
 }
