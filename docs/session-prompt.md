@@ -30,6 +30,14 @@ This is a **Home Massage Platform** - a Next.js 15+ application for connecting c
 - Use existing animation components: `FadeIn`, `SlideUp`, `PageTransition`, `StaggerChildren`, `HoverLift`
 - Follow the Framer Motion rule in `.cursor/rules/framer-motion-animations.mdc`
 
+#### **Data Strategy - MOCK DATA ONLY**
+
+- **NO BACKEND API CALLS** - This is UI-only development
+- **ALWAYS** use mock data for all functionality
+- **ALWAYS** create realistic mock data in `src/data/` folder
+- **NEVER** implement real API integrations
+- Focus on beautiful UI/UX with mock data until frontend is complete
+
 #### **Folder Structure - ALWAYS Follow**
 
 - **ALWAYS** check `docs/folder-structure.md` before creating files
@@ -80,7 +88,7 @@ This is a **Home Massage Platform** - a Next.js 15+ application for connecting c
 
 - **ALWAYS** update the action plan checkboxes
 - **ALWAYS** update folder structure documentation
-- **ALWAYS** commit changes to Git
+- **NO COMMITS** - User will review and commit manually
 - Test functionality and animations
 
 ### 5. **Key Files to Check**
@@ -149,9 +157,11 @@ This is a **Home Massage Platform** - a Next.js 15+ application for connecting c
 - [ ] Use Shadcn MCP for UI components
 - [ ] Use Framer Motion for animations
 - [ ] Follow folder structure rules
+- [ ] Use mock data only (no backend API calls)
 - [ ] Update action plan when tasks complete
 - [ ] Update folder structure documentation
-- [ ] Test functionality and commit changes
+- [ ] Test functionality with exact order: `npm run lint` → `npm run format` → `npm run build`
+- [ ] **NO COMMITS** - User will review and commit manually
 
 ## 🎯 **Ready to Continue Development!**
 
