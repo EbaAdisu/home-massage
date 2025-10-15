@@ -1,0 +1,96 @@
+---
+alwaysApply: true
+description: Always check and maintain folder structure documentation
+---
+
+# Folder Structure Rule
+
+## ALWAYS Check Folder Structure First
+
+**Before creating any new files or folders:**
+
+1. **Read the folder structure**: Check [docs/folder-structure.md](mdc:docs/folder-structure.md) first
+2. **Follow the planned structure**: Use the "Planned Folder Structure" section as a guide
+3. **Maintain organization**: Keep related files in appropriate folders
+4. **Update documentation**: Always update the folder structure doc when making changes
+
+## Required Actions
+
+### Before Creating Files
+
+-   [ ] **Check existing structure** in [docs/folder-structure.md](mdc:docs/folder-structure.md)
+-   [ ] **Verify folder location** follows the planned structure
+-   [ ] **Ensure naming conventions** are followed
+-   [ ] **Check if folder exists** or needs to be created
+
+### After Creating Files
+
+-   [ ] **Update folder structure doc** with new files/folders
+-   [ ] **Verify organization** follows the guidelines
+-   [ ] **Check naming consistency** across the project
+-   [ ] **Ensure proper grouping** of related files
+
+## Folder Structure Guidelines
+
+### **App Router Structure**
+
+-   Use route groups `(group-name)` for logical organization
+-   Keep related pages together in the same folder
+-   Use `layout.tsx` for shared layouts within route groups
+
+### **Components Organization**
+
+-   **ui/**: Shadcn/ui components (copy-paste from registry)
+-   **forms/**: Form-specific components
+-   **layout/**: Layout and navigation components
+-   **features/**: Feature-specific components organized by domain
+-   **animations/**: Reusable animation components
+
+### **State Management**
+
+-   **stores/**: Zustand stores organized by domain
+-   **hooks/**: Custom hooks for component logic
+-   **types/**: TypeScript type definitions
+
+### **Data Management**
+
+-   **data/**: Mock data files for development
+-   **lib/**: Utility functions and API helpers
+
+## Naming Conventions
+
+### **Files and Folders**
+
+-   Use kebab-case for folder names: `user-profile/`
+-   Use kebab-case for file names: `booking-form.tsx`
+-   Use PascalCase for component files: `BookingForm.tsx`
+
+### **Components**
+
+-   Use PascalCase for component names
+-   Use descriptive names that indicate purpose
+-   Group related components in feature folders
+
+### **Hooks**
+
+-   Start with `use-` prefix: `use-auth.ts`
+-   Use kebab-case for hook names
+-   Keep hooks focused on single responsibility
+
+### **Stores**
+
+-   Use descriptive names: `user-store.ts`
+-   Include `-store` suffix for clarity
+-   Group related state in the same store
+
+## Critical Rules
+
+1. **NEVER create files** without checking the folder structure first
+2. **ALWAYS update** [docs/folder-structure.md](mdc:docs/folder-structure.md) when making changes
+3. **FOLLOW naming conventions** consistently
+4. **ORGANIZE components** by feature and responsibility
+5. **KEEP related files** in the same folder
+
+## Folder Structure Reference
+
+The complete folder structure is documented in [docs/folder-structure.md](mdc:docs/folder-structure.md). Always refer to this file before making any structural changes to the project.
