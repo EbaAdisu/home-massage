@@ -5,24 +5,28 @@ A beautiful, modern web application that connects customers with professional ma
 ## ✨ Features
 
 ### 🎨 **Advanced Theming System**
+
 - **4 Beautiful Themes**: Wellness, Luxury, Modern, and Spa
 - **Theme Switching**: Instant theme changes with persistence
 - **Custom Animations**: Theme-specific animations and transitions
 - **Dark Mode Support**: Toggle between light and dark modes
 
 ### 🎭 **Smooth Animations**
+
 - **Page Transitions**: Smooth navigation between pages
 - **Component Animations**: Fade-in, slide-up, and loading animations
 - **Micro-interactions**: Delightful hover effects and button animations
 - **Loading States**: Beautiful skeleton screens and spinners
 
 ### 🧩 **Modern UI Components**
+
 - **25+ Shadcn/ui Components**: Complete component library
 - **Responsive Design**: Mobile-first approach
 - **Accessibility**: WCAG 2.1 compliant components
 - **Form Validation**: React Hook Form + Zod integration
 
 ### 🏗️ **Robust Architecture**
+
 - **Next.js 15**: Latest React framework with App Router
 - **TypeScript**: Full type safety
 - **Zustand**: Lightweight state management
@@ -32,23 +36,27 @@ A beautiful, modern web application that connects customers with professional ma
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/EbaAdisu/home-massage.git
    cd home-massage
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -61,21 +69,25 @@ A beautiful, modern web application that connects customers with professional ma
 The platform features a comprehensive theming system with 4 beautiful presets:
 
 ### 🌿 **Wellness Theme**
+
 - Soft greens and calming colors
 - Perfect for relaxation and wellness
 - Organic shapes and natural aesthetics
 
 ### ✨ **Luxury Theme**
+
 - Gold accents and elegant typography
 - Premium, high-end feel
 - Sophisticated color palette
 
 ### 🎯 **Modern Theme**
+
 - Clean blues and minimal design
 - Contemporary, professional look
 - Geometric elements and clean lines
 
 ### 🧘 **Spa Theme**
+
 - Earth tones and zen aesthetics
 - Natural textures and calming colors
 - Perfect for spa-like experiences
@@ -114,6 +126,7 @@ src/
 ## 🎯 Roadmap
 
 ### ✅ Phase 1: Foundation & Setup (COMPLETED)
+
 - [x] Next.js 15 with TypeScript
 - [x] Shadcn/ui component library
 - [x] Advanced theming system
@@ -122,18 +135,21 @@ src/
 - [x] Beautiful homepage
 
 ### 🚀 Phase 2: Authentication & User Management (NEXT)
+
 - [ ] Authentication forms
 - [ ] User profile management
 - [ ] Masseur registration
 - [ ] Dashboard systems
 
 ### ⏳ Phase 3: Masseur Features
+
 - [ ] Portfolio management
 - [ ] Service configuration
 - [ ] Availability calendar
 - [ ] Earnings tracking
 
 ### ⏳ Phase 4: Customer Features
+
 - [ ] Search & discovery
 - [ ] Booking system
 - [ ] Review system

@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Switch } from '@/components/ui/switch';
 import { Moon, Palette, Sun, Zap, ZapIcon, ZapOff } from 'lucide-react';
@@ -34,27 +34,29 @@ export function ThemeSelector() {
       <DropdownMenuContent className="w-56" align="end">
         <DropdownMenuLabel>Theme Settings</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        
+
         {/* Theme Selection */}
         <div className="px-2 py-1.5">
-          <div className="text-xs font-medium text-muted-foreground mb-2">Theme</div>
+          <div className="text-muted-foreground mb-2 text-xs font-medium">
+            Theme
+          </div>
           <div className="grid grid-cols-2 gap-1">
-            {availableThemes.map((theme) => (
+            {availableThemes.map(theme => (
               <Button
                 key={theme}
                 variant={currentTheme === theme ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setTheme(theme)}
-                className="justify-start text-xs h-8"
+                className="h-8 justify-start text-xs"
               >
                 {theme.charAt(0).toUpperCase() + theme.slice(1)}
               </Button>
             ))}
           </div>
         </div>
-        
+
         <DropdownMenuSeparator />
-        
+
         {/* Dark Mode Toggle */}
         <div className="px-2 py-1.5">
           <div className="flex items-center justify-between">
@@ -73,12 +75,14 @@ export function ThemeSelector() {
             />
           </div>
         </div>
-        
+
         <DropdownMenuSeparator />
-        
+
         {/* Animation Speed */}
         <div className="px-2 py-1.5">
-          <div className="text-xs font-medium text-muted-foreground mb-2">Animation Speed</div>
+          <div className="text-muted-foreground mb-2 text-xs font-medium">
+            Animation Speed
+          </div>
           <div className="space-y-1">
             {[
               { value: 'slow', label: 'Slow', icon: ZapOff },
@@ -89,10 +93,12 @@ export function ThemeSelector() {
                 key={value}
                 variant={animationSpeed === value ? 'default' : 'ghost'}
                 size="sm"
-                onClick={() => setAnimationSpeed(value as 'slow' | 'normal' | 'fast')}
-                className="w-full justify-start text-xs h-8"
+                onClick={() =>
+                  setAnimationSpeed(value as 'slow' | 'normal' | 'fast')
+                }
+                className="h-8 w-full justify-start text-xs"
               >
-                <Icon className="h-3 w-3 mr-2" />
+                <Icon className="mr-2 h-3 w-3" />
                 {label}
               </Button>
             ))}

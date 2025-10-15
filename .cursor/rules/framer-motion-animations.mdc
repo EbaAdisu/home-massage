@@ -1,0 +1,137 @@
+---
+alwaysApply: true
+description: Animation system using Framer Motion for all animations
+---
+
+# Framer Motion Animation Rule
+
+## Always Use Framer Motion for Animations
+
+**CRITICAL**: This project uses Framer Motion for ALL animations. Never use CSS animations or Tailwind animation classes for component animations.
+
+## Animation Components Available
+
+- **Page Transitions**: Use [PageTransition](mdc:src/components/animations/page-transition.tsx) for page-level animations
+- **Fade In**: Use [FadeIn](mdc:src/components/animations/fade-in.tsx) for fade-in effects
+- **Slide Up**: Use [SlideUp](mdc:src/components/animations/slide-up.tsx) for slide-up effects
+
+## Animation Guidelines
+
+### ✅ DO Use Framer Motion
+- Use `motion.div`, `motion.section`, etc. for animated elements
+- Use `AnimatePresence` for enter/exit animations
+- Use `variants` for complex animation sequences
+- Use `transition` props for timing control
+- Use `initial`, `animate`, `exit` props for state-based animations
+
+### ❌ DON'T Use CSS Animations
+- Never use `animate-pulse`, `animate-bounce`, `animate-spin` from Tailwind
+- Never use CSS `@keyframes` for component animations
+- Never use CSS `transition` for complex animations
+- Never use CSS `transform` for animation sequences
+
+## Animation Patterns
+
+### Basic Fade In
+```tsx
+import { FadeIn } from '@/components/animations/fade-in';
+
+<FadeIn delay={200}>
+  <div>Content</div>
+</FadeIn>
+```
+
+### Slide Up Animation
+```tsx
+import { SlideUp } from '@/components/animations/slide-up';
+
+<SlideUp delay={300}>
+  <div>Content</div>
+</SlideUp>
+```
+
+### Page Transitions
+```tsx
+import { PageTransition } from '@/components/animations/page-transition';
+
+<PageTransition>
+  <div>Page content</div>
+</PageTransition>
+```
+
+### Custom Motion Components
+```tsx
+import { motion } from 'framer-motion';
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3, delay: 0.1 }}
+>
+  Content
+</motion.div>
+```
+
+## Animation Timing
+
+- **Fast**: 0.2s duration
+- **Normal**: 0.3s duration  
+- **Slow**: 0.5s duration
+- **Stagger**: 0.1s delay between elements
+
+## Theme Integration
+
+Animations respect the theme system:
+- Use `useThemeContext()` for theme-aware animations
+- Animation speed controlled by theme settings
+- Easing functions from theme configuration
+
+## Examples of Correct Usage
+
+```tsx
+// ✅ Correct - Using Framer Motion
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.3 }}
+  className="hover:scale-105" // Only for hover states
+>
+  Content
+</motion.div>
+
+// ✅ Correct - Using animation components
+<FadeIn delay={200}>
+  <Card>Content</Card>
+</FadeIn>
+```
+
+## Examples of Incorrect Usage
+
+```tsx
+// ❌ Wrong - Using Tailwind animations
+<div className="animate-pulse animate-bounce">
+  Content
+</div>
+
+// ❌ Wrong - Using CSS animations
+<div className="animate-spin">
+  Content
+</div>
+```
+
+## Performance Considerations
+
+- Use `layout` prop for layout animations
+- Use `will-change` CSS property sparingly
+- Prefer `transform` and `opacity` for smooth animations
+- Use `AnimatePresence` for conditional rendering
+
+## Animation States
+
+- **Initial**: Element before animation starts
+- **Animate**: Element during animation
+- **Exit**: Element when leaving (with AnimatePresence)
+- **Hover**: Element on hover state
+- **Focus**: Element on focus state
+
+Remember: Framer Motion provides better performance, more control, and better integration with React than CSS animations.

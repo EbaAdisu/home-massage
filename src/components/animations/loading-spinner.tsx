@@ -1,17 +1,17 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useThemeContext } from '../theme-provider';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
-export function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) {
-  const { themeConfig } = useThemeContext();
+export function LoadingSpinner({
+  size = 'md',
+  className,
+}: LoadingSpinnerProps) {
 
   const sizeClasses = {
     sm: 'h-4 w-4',
@@ -22,7 +22,7 @@ export function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) 
   return (
     <motion.div
       className={cn(
-        'rounded-full border-2 border-primary border-t-transparent',
+        'border-primary rounded-full border-2 border-t-transparent',
         sizeClasses[size],
         className
       )}

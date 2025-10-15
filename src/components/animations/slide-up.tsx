@@ -10,21 +10,21 @@ interface SlideUpProps {
   className?: string;
 }
 
-export function SlideUp({ 
-  children, 
-  delay = 0, 
+export function SlideUp({
+  children,
+  delay = 0,
   duration = 300,
-  className 
+  className,
 }: SlideUpProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: duration / 1000,
-        delay: delay / 1000,
-        ease: 'easeOut',
-      }}
+        transition={{
+          duration: duration / 1000,
+          delay: delay / 1000,
+          ease: 'easeOut' as const,
+        }}
       className={className}
     >
       {children}

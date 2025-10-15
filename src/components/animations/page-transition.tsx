@@ -29,7 +29,7 @@ export function PageTransition({ children, className }: PageTransitionProps) {
 
   const pageTransition = {
     type: 'tween' as const,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     duration: 0.3,
   };
 

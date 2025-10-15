@@ -17,7 +17,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   useEffect(() => {
     const root = document.documentElement;
     const cssVariables = getThemeCSSVariables(theme.themeConfig);
-    
+
     Object.entries(cssVariables).forEach(([key, value]) => {
       root.style.setProperty(key, value);
     });
@@ -30,13 +30,19 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     }
 
     // Apply animation speed
-    root.style.setProperty('--animation-duration', theme.themeConfig.animations.duration[theme.animationSpeed]);
-  }, [theme.currentTheme, theme.isDarkMode, theme.animationSpeed, theme.themeConfig]);
+    root.style.setProperty(
+      '--animation-duration',
+      theme.themeConfig.animations.duration[theme.animationSpeed]
+    );
+  }, [
+    theme.currentTheme,
+    theme.isDarkMode,
+    theme.animationSpeed,
+    theme.themeConfig,
+  ]);
 
   return (
-    <ThemeContext.Provider value={theme}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
   );
 }
 

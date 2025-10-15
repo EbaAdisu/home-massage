@@ -4,9 +4,9 @@ This folder contains all the documentation for the Home Massage Platform project
 
 ## Documents
 
--   [Project Requirements](./project-requirements.md) - Functional requirements and user stories
--   [Technical Requirements](./technical-requirements.md) - Technical specifications and architecture
--   [Action Plan](./action-plan.md) - Development roadmap and milestones
+- [Project Requirements](./project-requirements.md) - Functional requirements and user stories
+- [Technical Requirements](./technical-requirements.md) - Technical specifications and architecture
+- [Action Plan](./action-plan.md) - Development roadmap and milestones
 
 ## Project Overview
 

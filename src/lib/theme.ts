@@ -355,7 +355,9 @@ export function getAllThemes(): string[] {
   return Object.keys(themePresets);
 }
 
-export function getThemeCSSVariables(theme: ThemeConfig): Record<string, string> {
+export function getThemeCSSVariables(
+  theme: ThemeConfig
+): Record<string, string> {
   return {
     '--background': theme.colors.background,
     '--foreground': theme.colors.foreground,

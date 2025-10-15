@@ -199,90 +199,90 @@ home-massage/
 
 ### **App Router Structure**
 
--   Use route groups `(group-name)` for logical organization
--   Keep related pages together in the same folder
--   Use `layout.tsx` for shared layouts within route groups
+- Use route groups `(group-name)` for logical organization
+- Keep related pages together in the same folder
+- Use `layout.tsx` for shared layouts within route groups
 
 ### **Components Organization**
 
--   **ui/**: Shadcn/ui components (copy-paste from registry)
--   **forms/**: Form-specific components
--   **layout/**: Layout and navigation components
--   **features/**: Feature-specific components organized by domain
--   **animations/**: Reusable animation components
+- **ui/**: Shadcn/ui components (copy-paste from registry)
+- **forms/**: Form-specific components
+- **layout/**: Layout and navigation components
+- **features/**: Feature-specific components organized by domain
+- **animations/**: Reusable animation components
 
 ### **State Management**
 
--   **stores/**: Zustand stores organized by domain
--   **hooks/**: Custom hooks for component logic
--   **types/**: TypeScript type definitions
+- **stores/**: Zustand stores organized by domain
+- **hooks/**: Custom hooks for component logic
+- **types/**: TypeScript type definitions
 
 ### **Data Management**
 
--   **data/**: Mock data files for development
--   **lib/**: Utility functions and API helpers
--   **services/**: API service functions for backend communication
+- **data/**: Mock data files for development
+- **lib/**: Utility functions and API helpers
+- **services/**: API service functions for backend communication
 
 ### **Services Organization**
 
--   **auth-service.ts**: Authentication API calls (login, register, logout)
--   **user-service.ts**: User management API calls (profile, preferences)
--   **masseur-service.ts**: Masseur API calls (profile, services, availability)
--   **booking-service.ts**: Booking API calls (create, update, cancel)
--   **review-service.ts**: Review API calls (create, update, delete)
--   **search-service.ts**: Search API calls (filter, search, recommendations)
+- **auth-service.ts**: Authentication API calls (login, register, logout)
+- **user-service.ts**: User management API calls (profile, preferences)
+- **masseur-service.ts**: Masseur API calls (profile, services, availability)
+- **booking-service.ts**: Booking API calls (create, update, cancel)
+- **review-service.ts**: Review API calls (create, update, delete)
+- **search-service.ts**: Search API calls (filter, search, recommendations)
 
 ### **Styling**
 
--   **styles/**: CSS files and theme-specific styles
--   Use Tailwind CSS for utility classes
--   Use CSS modules for component-specific styles
+- **styles/**: CSS files and theme-specific styles
+- Use Tailwind CSS for utility classes
+- Use CSS modules for component-specific styles
 
 ## Naming Conventions
 
 ### **Files and Folders**
 
--   Use kebab-case for folder names: `user-profile/`
--   Use kebab-case for file names: `booking-form.tsx`
--   Use PascalCase for component files: `BookingForm.tsx`
+- Use kebab-case for folder names: `user-profile/`
+- Use kebab-case for file names: `booking-form.tsx`
+- Use PascalCase for component files: `BookingForm.tsx`
 
 ### **Components**
 
--   Use PascalCase for component names
--   Use descriptive names that indicate purpose
--   Group related components in feature folders
+- Use PascalCase for component names
+- Use descriptive names that indicate purpose
+- Group related components in feature folders
 
 ### **Hooks**
 
--   Start with `use-` prefix: `use-auth.ts`
--   Use kebab-case for hook names
--   Keep hooks focused on single responsibility
+- Start with `use-` prefix: `use-auth.ts`
+- Use kebab-case for hook names
+- Keep hooks focused on single responsibility
 
 ### **Stores**
 
--   Use descriptive names: `user-store.ts`
--   Include `-store` suffix for clarity
--   Group related state in the same store
+- Use descriptive names: `user-store.ts`
+- Include `-store` suffix for clarity
+- Group related state in the same store
 
 ## Services Architecture
 
 ### **Service Layer Pattern**
 
--   **Services** handle all API communication
--   **Stores** use services to fetch and update data
--   **Components** use stores, not services directly
--   **Mock Data** can be easily replaced with real API calls
+- **Services** handle all API communication
+- **Stores** use services to fetch and update data
+- **Components** use stores, not services directly
+- **Mock Data** can be easily replaced with real API calls
 
 ### **Service Function Structure**
 
 ```typescript
 // Example: auth-service.ts
 export const authService = {
-    login: async (credentials: LoginCredentials) => Promise<AuthResponse>,
-    register: async (userData: RegisterData) => Promise<AuthResponse>,
-    logout: async () => Promise<void>,
-    refreshToken: async () => Promise<AuthResponse>,
-}
+  login: async (credentials: LoginCredentials) => Promise<AuthResponse>,
+  register: async (userData: RegisterData) => Promise<AuthResponse>,
+  logout: async () => Promise<void>,
+  refreshToken: async () => Promise<AuthResponse>,
+};
 ```
 
 ### **Integration with Stores**
@@ -290,12 +290,12 @@ export const authService = {
 ```typescript
 // Example: user-store.ts
 const useUserStore = create((set, get) => ({
-    user: null,
-    login: async (credentials) => {
-        const response = await authService.login(credentials)
-        set({ user: response.user })
-    },
-}))
+  user: null,
+  login: async credentials => {
+    const response = await authService.login(credentials);
+    set({ user: response.user });
+  },
+}));
 ```
 
 ## Development Workflow
@@ -310,7 +310,7 @@ const useUserStore = create((set, get) => ({
 
 ## Maintenance
 
--   **Always update** `docs/folder-structure.md` when adding/removing folders
--   **Follow the structure** outlined in this document
--   **Use the Cursor rule** to maintain consistency
--   **Review structure** regularly for optimization
+- **Always update** `docs/folder-structure.md` when adding/removing folders
+- **Follow the structure** outlined in this document
+- **Use the Cursor rule** to maintain consistency
+- **Review structure** regularly for optimization
