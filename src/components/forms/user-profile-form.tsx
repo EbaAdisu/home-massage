@@ -1,26 +1,26 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { User, Phone, Mail, Camera, Loader2, Check } from 'lucide-react';
+import { Camera, Check, Loader2, Mail, Phone, User } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
+import { z } from 'zod';
 
-import { useAuth } from '@/hooks/use-auth';
+import { FadeIn } from '@/components/animations/fade-in';
+import { SlideUp } from '@/components/animations/slide-up';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { FadeIn } from '@/components/animations/fade-in';
-import { SlideUp } from '@/components/animations/slide-up';
+import { useAuth } from '@/hooks/use-auth';
 
 const profileSchema = z.object({
   firstName: z

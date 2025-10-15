@@ -1,24 +1,24 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import {
-  Home,
-  Calendar,
-  Users,
-  Settings,
-  Star,
-  MapPin,
-  BarChart3,
-  MessageSquare,
-  User,
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { FadeIn } from '@/components/animations/fade-in';
 import { SlideUp } from '@/components/animations/slide-up';
+import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/use-auth';
+import { cn } from '@/lib/utils';
+import {
+    BarChart3,
+    Calendar,
+    Home,
+    MapPin,
+    MessageSquare,
+    Settings,
+    Star,
+    User,
+    Users,
+} from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const customerNavItems = [
   {

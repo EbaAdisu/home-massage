@@ -1,13 +1,13 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { FadeIn } from '@/components/animations/fade-in';
 import { SlideUp } from '@/components/animations/slide-up';
 import { Button } from '@/components/ui/button';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card';
 import { Calendar, DollarSign, Star, Users } from 'lucide-react';
 
 export default function MasseurDashboard() {

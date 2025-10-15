@@ -1,21 +1,21 @@
 'use client';
 
-import { useState } from 'react';
-import { Bell, Menu, Search, User, LogOut } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { FadeIn } from '@/components/animations/fade-in';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { FadeIn } from '@/components/animations/fade-in';
+import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/use-auth';
+import { Bell, LogOut, Menu, Search, User } from 'lucide-react';
+import { useState } from 'react';
 
 export function DashboardHeader() {
   const { user, logout } = useAuth();

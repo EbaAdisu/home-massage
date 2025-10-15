@@ -1,27 +1,27 @@
 'use client';
 
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 import { useAuth } from '@/hooks/use-auth';
 
+import { FadeIn } from '@/components/animations/fade-in';
+import { SlideUp } from '@/components/animations/slide-up';
 import { Button } from '@/components/ui/button';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { FadeIn } from '@/components/animations/fade-in';
-import { SlideUp } from '@/components/animations/slide-up';
 
 const loginSchema = z.object({
   phone: z

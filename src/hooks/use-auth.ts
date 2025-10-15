@@ -1,4 +1,4 @@
-import { useUserStore } from '@/stores/user-store';
+import { User, useUserStore } from '@/stores/user-store';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 
@@ -60,7 +60,7 @@ export function useAuth() {
     router.push('/');
   };
 
-  const handleUpdateProfile = async (data: Partial<typeof user>) => {
+  const handleUpdateProfile = async (data: Partial<User>) => {
     try {
       await updateProfile(data);
       toast.success('Profile updated successfully!', {
