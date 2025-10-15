@@ -48,27 +48,27 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32">
+        <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Hero Content */}
               <div className="space-y-8">
                 <FadeIn>
-                  <Badge variant="secondary" className="mb-4">
-                    <Sparkles className="h-4 w-4 mr-2" />
+                  <Badge variant="secondary" className="mb-4 animate-pulse">
+                    <Sparkles className="h-4 w-4 mr-2 animate-spin" />
                     Professional Massage Therapy
                   </Badge>
                 </FadeIn>
                 
                 <SlideUp>
                   <h2 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                    Relax & Rejuvenate
-                    <span className="text-primary block">at Home</span>
+                    <span className="animate-fade-in-up">Relax & Rejuvenate</span>
+                    <span className="text-primary block animate-fade-in-up-delay">at Home</span>
                   </h2>
                 </SlideUp>
                 
                 <FadeIn delay={200}>
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-xl text-muted-foreground leading-relaxed animate-fade-in-up">
                     Connect with certified massage therapists in your area. 
                     Book appointments, read reviews, and enjoy professional 
                     massage services in the comfort of your own home.
@@ -77,12 +77,19 @@ export default function Home() {
 
                 <FadeIn delay={400}>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <MapPin className="h-5 w-5 mr-2" />
+                    <Button 
+                      size="lg" 
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
+                    >
+                      <MapPin className="h-5 w-5 mr-2 animate-bounce" />
                       Find Masseurs Near You
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Button variant="outline" size="lg">
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="transform hover:scale-105 transition-all duration-300 hover:shadow-md"
+                    >
                       <Users className="h-5 w-5 mr-2" />
                       Become a Masseur
                     </Button>
@@ -91,16 +98,16 @@ export default function Home() {
 
                 <FadeIn delay={600}>
                   <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                    <div className="flex items-center gap-2 hover:text-primary transition-colors duration-300">
+                      <CheckCircle className="h-4 w-4 text-primary animate-pulse" />
                       <span>Licensed Professionals</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-primary" />
+                    <div className="flex items-center gap-2 hover:text-primary transition-colors duration-300">
+                      <Shield className="h-4 w-4 text-primary animate-pulse" />
                       <span>Insured & Bonded</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Award className="h-4 w-4 text-primary" />
+                    <div className="flex items-center gap-2 hover:text-primary transition-colors duration-300">
+                      <Award className="h-4 w-4 text-primary animate-pulse" />
                       <span>5-Star Rated</span>
                     </div>
                   </div>
@@ -111,20 +118,20 @@ export default function Home() {
               <div className="relative">
                 <FadeIn delay={300}>
                   <div className="relative">
-                    <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+                    <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center animate-float">
                       <div className="text-center space-y-4">
-                        <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                          <Heart className="h-12 w-12 text-primary" />
+                        <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto animate-pulse">
+                          <Heart className="h-12 w-12 text-primary animate-heartbeat" />
                         </div>
-                        <h3 className="text-2xl font-semibold text-foreground">Professional Massage</h3>
-                        <p className="text-muted-foreground">At your convenience</p>
+                        <h3 className="text-2xl font-semibold text-foreground animate-fade-in-up">Professional Massage</h3>
+                        <p className="text-muted-foreground animate-fade-in-up-delay">At your convenience</p>
                       </div>
                     </div>
-                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center">
-                      <Star className="h-8 w-8 text-accent" />
+                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center animate-bounce">
+                      <Star className="h-8 w-8 text-accent animate-spin" />
                     </div>
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center">
-                      <Clock className="h-6 w-6 text-secondary" />
+                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center animate-bounce-delay">
+                      <Clock className="h-6 w-6 text-secondary animate-pulse" />
                     </div>
                   </div>
                 </FadeIn>

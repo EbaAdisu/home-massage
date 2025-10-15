@@ -1,13 +1,16 @@
 'use client';
 
-import React from 'react';
-import { useThemeContext } from './theme-provider';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu';
 import { Switch } from '@/components/ui/switch';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import { Palette, Moon, Sun, Zap, ZapOff, ZapIcon } from 'lucide-react';
+import { Moon, Palette, Sun, Zap, ZapIcon, ZapOff } from 'lucide-react';
+import { useThemeContext } from './theme-provider';
 
 export function ThemeSelector() {
   const {
@@ -21,99 +24,81 @@ export function ThemeSelector() {
   } = useThemeContext();
 
   return (
-    <Card className="w-full max-w-md">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Palette className="h-5 w-5" />
-          Theme Settings
-        </CardTitle>
-        <CardDescription>
-          Customize your massage platform experience
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-6">
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="sm" className="gap-2">
+          <Palette className="h-4 w-4" />
+          <span className="hidden sm:inline">Theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56" align="end">
+        <DropdownMenuLabel>Theme Settings</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        
         {/* Theme Selection */}
-        <div className="space-y-2">
-          <Label htmlFor="theme-select">Theme</Label>
-          <Select value={currentTheme} onValueChange={setTheme}>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a theme" />
-            </SelectTrigger>
-            <SelectContent>
-              {availableThemes.map((theme) => (
-                <SelectItem key={theme} value={theme}>
-                  {theme.charAt(0).toUpperCase() + theme.slice(1)}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Dark Mode Toggle */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            {isDarkMode ? (
-              <Moon className="h-4 w-4" />
-            ) : (
-              <Sun className="h-4 w-4" />
-            )}
-            <Label htmlFor="dark-mode">Dark Mode</Label>
-          </div>
-          <Switch
-            id="dark-mode"
-            checked={isDarkMode}
-            onCheckedChange={toggleDarkMode}
-          />
-        </div>
-
-        {/* Animation Speed */}
-        <div className="space-y-2">
-          <Label htmlFor="animation-speed">Animation Speed</Label>
-          <Select value={animationSpeed} onValueChange={setAnimationSpeed}>
-            <SelectTrigger>
-              <SelectValue placeholder="Select animation speed" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="slow">
-                <div className="flex items-center gap-2">
-                  <ZapOff className="h-4 w-4" />
-                  Slow
-                </div>
-              </SelectItem>
-              <SelectItem value="normal">
-                <div className="flex items-center gap-2">
-                  <Zap className="h-4 w-4" />
-                  Normal
-                </div>
-              </SelectItem>
-              <SelectItem value="fast">
-                <div className="flex items-center gap-2">
-                  <ZapIcon className="h-4 w-4" />
-                  Fast
-                </div>
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Theme Preview */}
-        <div className="space-y-2">
-          <Label>Preview</Label>
-          <div className="grid grid-cols-2 gap-2">
-            {availableThemes.slice(0, 4).map((theme) => (
+        <div className="px-2 py-1.5">
+          <div className="text-xs font-medium text-muted-foreground mb-2">Theme</div>
+          <div className="grid grid-cols-2 gap-1">
+            {availableThemes.map((theme) => (
               <Button
                 key={theme}
-                variant={currentTheme === theme ? 'default' : 'outline'}
+                variant={currentTheme === theme ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setTheme(theme)}
-                className="justify-start"
+                className="justify-start text-xs h-8"
               >
                 {theme.charAt(0).toUpperCase() + theme.slice(1)}
               </Button>
             ))}
           </div>
         </div>
-      </CardContent>
-    </Card>
+        
+        <DropdownMenuSeparator />
+        
+        {/* Dark Mode Toggle */}
+        <div className="px-2 py-1.5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              {isDarkMode ? (
+                <Moon className="h-4 w-4" />
+              ) : (
+                <Sun className="h-4 w-4" />
+              )}
+              <span className="text-sm">Dark Mode</span>
+            </div>
+            <Switch
+              checked={isDarkMode}
+              onCheckedChange={toggleDarkMode}
+              className="scale-75"
+            />
+          </div>
+        </div>
+        
+        <DropdownMenuSeparator />
+        
+        {/* Animation Speed */}
+        <div className="px-2 py-1.5">
+          <div className="text-xs font-medium text-muted-foreground mb-2">Animation Speed</div>
+          <div className="space-y-1">
+            {[
+              { value: 'slow', label: 'Slow', icon: ZapOff },
+              { value: 'normal', label: 'Normal', icon: Zap },
+              { value: 'fast', label: 'Fast', icon: ZapIcon },
+            ].map(({ value, label, icon: Icon }) => (
+              <Button
+                key={value}
+                variant={animationSpeed === value ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setAnimationSpeed(value as 'slow' | 'normal' | 'fast')}
+                className="w-full justify-start text-xs h-8"
+              >
+                <Icon className="h-3 w-3 mr-2" />
+                {label}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
