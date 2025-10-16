@@ -1,7 +1,7 @@
 import { FadeIn } from '@/components/animations/fade-in';
 import { PageTransition } from '@/components/animations/page-transition';
 
-export default function MasseurLayout({
+export default function CustomerLayout({
   children,
 }: {
   children: React.ReactNode;

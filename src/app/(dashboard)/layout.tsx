@@ -12,11 +12,11 @@ export default function DashboardLayout({
   return (
     <PageTransition>
       <SidebarProvider>
-        <div className="bg-background flex min-h-screen">
+        <div className="bg-background flex min-h-screen w-full">
           <DashboardSidebar />
-          <SidebarInset>
+          <SidebarInset className="flex-1 overflow-hidden">
             <DashboardHeader />
-            <main className="flex-1 p-6">
+            <main className="flex-1 overflow-auto p-6">
               <FadeIn delay={200}>{children}</FadeIn>
             </main>
           </SidebarInset>

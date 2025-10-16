@@ -8,7 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { BarChart3, Calendar, DollarSign, Image, Settings, Star, Users } from 'lucide-react';
+import {
+  BarChart3,
+  Calendar,
+  DollarSign,
+  Image,
+  Settings,
+  Star,
+  Users,
+} from 'lucide-react';
 import Link from 'next/link';
 
 export default function MasseurDashboard() {
@@ -138,25 +146,41 @@ export default function MasseurDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Button asChild className="w-full justify-start" variant="outline">
+              <Button
+                asChild
+                className="w-full justify-start"
+                variant="outline"
+              >
                 <Link href="/masseur/availability">
                   <Calendar className="mr-2 h-4 w-4" />
                   Manage Availability
                 </Link>
               </Button>
-              <Button asChild className="w-full justify-start" variant="outline">
+              <Button
+                asChild
+                className="w-full justify-start"
+                variant="outline"
+              >
                 <Link href="/masseur/services">
                   <Settings className="mr-2 h-4 w-4" />
                   Manage Services
                 </Link>
               </Button>
-              <Button asChild className="w-full justify-start" variant="outline">
+              <Button
+                asChild
+                className="w-full justify-start"
+                variant="outline"
+              >
                 <Link href="/masseur/portfolio">
                   <Image className="mr-2 h-4 w-4" />
                   Portfolio Gallery
                 </Link>
               </Button>
-              <Button asChild className="w-full justify-start" variant="outline">
+              <Button
+                asChild
+                className="w-full justify-start"
+                variant="outline"
+              >
                 <Link href="/masseur/earnings">
                   <BarChart3 className="mr-2 h-4 w-4" />
                   View Earnings

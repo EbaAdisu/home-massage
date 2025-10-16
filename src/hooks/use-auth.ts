@@ -23,7 +23,13 @@ export function useAuth() {
       toast.success('Welcome back!', {
         description: 'You have successfully signed in to your account.',
       });
-      router.push('/dashboard');
+      // Redirect based on user role
+      const { user } = useUserStore.getState();
+      if (user?.role === 'masseur') {
+        router.push('/masseur');
+      } else {
+        router.push('/customer');
+      }
     } catch {
       toast.error('Login failed', {
         description: 'Please check your credentials and try again.',
@@ -43,7 +49,13 @@ export function useAuth() {
       toast.success('Account created successfully!', {
         description: 'Welcome to our massage platform. You can now sign in.',
       });
-      router.push('/dashboard');
+      // Redirect based on user role
+      const { user } = useUserStore.getState();
+      if (user?.role === 'masseur') {
+        router.push('/masseur');
+      } else {
+        router.push('/customer');
+      }
     } catch {
       toast.error('Registration failed', {
         description:
