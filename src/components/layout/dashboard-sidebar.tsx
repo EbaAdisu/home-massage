@@ -70,22 +70,29 @@ function SidebarContentComponent() {
   const { user } = useAuth();
   const { state } = useSidebar();
 
-  const navItems =
-    user?.role === 'masseur' ? masseurNavItems : customerNavItems;
+  // Determine if user is on masseur pages or customer pages
+  const isMasseurPage = pathname.startsWith('/masseur');
+  const isCustomerPage = pathname.startsWith('/customer');
+
+  // Use role from user store, but also consider current path
+  const isMasseur = user?.role === 'masseur' || isMasseurPage;
+  const isCustomer = user?.role === 'customer' || isCustomerPage;
+
+  const navItems = isMasseur ? masseurNavItems : customerNavItems;
 
   return (
     <FadeIn delay={300}>
       <SidebarHeader>
-        <div className="flex items-center gap-2 px-2 py-2">
+        <div
+          className={`flex items-center px-2 py-2 ${state === 'collapsed' ? 'justify-center' : 'gap-2'}`}
+        >
           <div className="bg-primary text-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
             <Home className="size-4" />
           </div>
           {state === 'expanded' && (
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">
-                {user?.role === 'masseur'
-                  ? 'Masseur Portal'
-                  : 'Customer Portal'}
+                {isMasseur ? 'Masseur Portal' : 'Customer Portal'}
               </span>
               <span className="truncate text-xs">
                 {user?.firstName} {user?.lastName}
@@ -126,15 +133,7 @@ function SidebarContentComponent() {
       </SidebarContent>
 
       <SidebarFooter>
-        <div className="p-2">
-          <div className="text-muted-foreground px-2 text-xs">
-            Press{' '}
-            <kbd className="bg-muted text-muted-foreground pointer-events-none inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none">
-              <span className="text-xs">⌘</span>B
-            </kbd>{' '}
-            to toggle sidebar
-          </div>
-        </div>
+        {/* Empty footer - toggle button moved to main navbar */}
       </SidebarFooter>
     </FadeIn>
   );

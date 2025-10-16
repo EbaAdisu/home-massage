@@ -5,21 +5,23 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
+import { useSidebar } from '@/components/ui/sidebar';
 import { useAuth } from '@/hooks/use-auth';
-import { Bell, LogOut, Menu, Search, User } from 'lucide-react';
+import { Bell, LogOut, PanelLeft, Search, User } from 'lucide-react';
 import { useState } from 'react';
 
 export function DashboardHeader() {
   const { user, logout } = useAuth();
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const { toggleSidebar } = useSidebar();
 
   const getInitials = (firstName: string, lastName: string) => {
     return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
@@ -31,8 +33,14 @@ export function DashboardHeader() {
         <div className="flex h-16 items-center justify-between px-6">
           {/* Left side */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleSidebar}
+              className="hover:bg-accent hover:text-accent-foreground border-border/50 border"
+            >
+              <PanelLeft className="h-4 w-4" />
+              <span className="sr-only">Toggle Sidebar</span>
             </Button>
             <div className="hidden items-center space-x-2 md:flex">
               <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg">
