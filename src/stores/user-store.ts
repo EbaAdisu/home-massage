@@ -57,14 +57,14 @@ export const useUserStore = create<UserStore>()(
           // Simulate API call
           await new Promise(resolve => setTimeout(resolve, 1500));
 
-          // Mock user data
+          // Mock user data - determine role based on phone number for demo
           const mockUser: User = {
             id: '1',
             firstName: 'John',
             lastName: 'Doe',
             phone,
             email: 'john@example.com',
-            role: 'customer',
+            role: phone.includes('masseur') ? 'masseur' : 'customer',
             isVerified: true,
             avatar: '/avatars/john-doe.jpg',
             createdAt: new Date().toISOString(),
@@ -95,14 +95,14 @@ export const useUserStore = create<UserStore>()(
           // Simulate API call
           await new Promise(resolve => setTimeout(resolve, 2000));
 
-          // Mock user data
+          // Mock user data - determine role based on phone number for demo
           const mockUser: User = {
             id: Math.random().toString(36).substr(2, 9),
             firstName: userData.firstName,
             lastName: userData.lastName,
             phone: userData.phone,
             email: userData.email,
-            role: 'customer',
+            role: userData.phone.includes('masseur') ? 'masseur' : 'customer',
             isVerified: false,
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
