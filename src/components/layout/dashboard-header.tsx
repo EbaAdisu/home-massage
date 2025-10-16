@@ -28,8 +28,8 @@ export function DashboardHeader() {
   };
 
   return (
-    <FadeIn delay={200}>
-      <header className="border-border bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b backdrop-blur">
+    <header className="border-border bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b backdrop-blur">
+      <FadeIn delay={200}>
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           {/* Left side */}
           <div className="flex items-center space-x-4">
@@ -124,7 +124,7 @@ export function DashboardHeader() {
             </DropdownMenu>
           </div>
         </div>
-      </header>
-    </FadeIn>
+      </FadeIn>
+    </header>
   );
 }

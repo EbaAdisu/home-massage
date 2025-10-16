@@ -14,7 +14,7 @@ export default function DashboardLayout({
       <SidebarProvider>
         <div className="bg-background flex min-h-screen w-full">
           <DashboardSidebar />
-          <SidebarInset className="flex-1 overflow-hidden">
+          <SidebarInset className="flex-1">
             <DashboardHeader />
             <main className="flex-1 overflow-auto p-6">
               <FadeIn delay={200}>{children}</FadeIn>
